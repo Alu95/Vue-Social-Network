@@ -180,8 +180,10 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.centerCard{
- transform: translate(0, -50%);
- text-align: left !important; 
+.cardCenter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

@@ -16,7 +16,17 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
+body{
+  background: linear-gradient(130deg,
+   rgba(253, 104, 4, 0.8) 5%, 
+   rgba(255, 21, 0, 0.8) 40%,
+   rgba(121, 0, 158, 0.8) 80% );
+   background-repeat: no-repeat;
+   background-size: 100%;
+   min-height: 100vh;
+   overflow-x: hidden;
+   
+}
 *,
 *:before,
 *:after {

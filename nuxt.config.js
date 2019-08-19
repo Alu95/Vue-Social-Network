@@ -53,14 +53,16 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/auth',
-    '@nuxtjs/toast'
+    '@nuxtjs/toast',
+    'nuxt-fontawesome',
+    'nuxt-vue-material',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://127.0.0.1:2000/',
+    baseURL: 'http://3.16.136.89:2000',
   },
 
   auth: {
@@ -90,6 +92,18 @@ export default {
       callback: '/auth/login',
       home: '/dash/'
     }
+  },
+
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+    ],
+  },
+  vueMaterial: {
+    theme: 'default-light'
   },
   /*
   ** Build configuration

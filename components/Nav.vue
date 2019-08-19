@@ -10,15 +10,15 @@
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
-                <b-nav-item to="/dash/" v-if="$auth.loggedIn">Dashboard</b-nav-item>
+                <b-nav-item to="/">Home</b-nav-item>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
                 <b-nav-item-dropdown right v-if="$auth.loggedIn">
                 <!-- Using 'button-content' slot -->
-                <template slot="button-content">User</template>
-                <b-dropdown-item href="#">Profile</b-dropdown-item>
+                <template slot="button-content">{{$auth.user.name}}</template>
+                <b-dropdown-item to="/dash/" >Profile</b-dropdown-item>
                 <b-dropdown-item href="#" @click="logOut">Sign Out</b-dropdown-item>
                 </b-nav-item-dropdown>
                 <b-navbar-nav right v-else>
