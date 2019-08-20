@@ -42,7 +42,8 @@ export default {
     './plugins/mixins/validation',
     './plugins/mixins/user_pers',
     './plugins/axios',
-    './plugins/veeValidation'
+    './plugins/veeValidation',
+    './plugins/moment'
   ],
   /*
   ** Nuxt.js modules //test

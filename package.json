@@ -21,9 +21,11 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
+    "nuxt-material-design-icons": "^1.0.4",
     "nuxt-validate": "^1.0.1",
     "nuxt-vue-material": "^1.2.0",
-    "vee-validate": "^2.2.13"
+    "vee-validate": "^2.2.13",
+    "vue-moment": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"

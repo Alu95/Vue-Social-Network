@@ -39,8 +39,8 @@
         <b-card 
         bg-variant="light" 
         class="my-2"
-        v-for="(item,name,index) in postShow"
-        :key="index"
+        v-for="item in postShow"
+        :key="item.id"
         > 
             <Post 
             :author="item.user_name"
@@ -49,8 +49,8 @@
             :postBody="item.message" 
             />
             <Likes :post_id="item.id_r"/>
+            <p>{{item.id}}</p>
         </b-card>
-        
     </div>
 </template>
 
@@ -95,7 +95,7 @@ export default {
             .then(res => {
                 this.postShow = res.data.postData;
                 this.loading = false;
-                console.log(res.data.postData)
+                //console.log(res.data.postData)
             })
             .catch(err => {
                 console.error(err); 
