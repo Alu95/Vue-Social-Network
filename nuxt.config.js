@@ -57,6 +57,7 @@ export default {
     '@nuxtjs/toast',
     'nuxt-fontawesome',
     'nuxt-vue-material',
+    'nuxt-material-design-icons',
   ],
   /*
   ** Axios module configuration
