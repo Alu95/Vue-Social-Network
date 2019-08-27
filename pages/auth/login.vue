@@ -100,7 +100,7 @@ export default {
             this.awaitS = true;
             await this.$auth.loginWith('local', {data: this.form})
             .then( res => {
-                this.$router.push({name: 'dash'})
+                this.$router.push({name: ''})
             })
             .catch(err => {
                 console.error(err);

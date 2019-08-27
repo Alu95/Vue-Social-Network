@@ -49,7 +49,6 @@
             :postBody="item.message" 
             />
             <Likes :post_id="item.id_r"/>
-            <p>{{item.id}}</p>
         </b-card>
     </div>
 </template>

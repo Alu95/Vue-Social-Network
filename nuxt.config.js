@@ -29,7 +29,7 @@ export default {
  router: {
   middleware: [
     'clearValErrors',
-    'auth'
+    'auth',
   ]
  },
   css: [
@@ -43,7 +43,7 @@ export default {
     './plugins/mixins/user_pers',
     './plugins/axios',
     './plugins/veeValidation',
-    './plugins/moment'
+    './plugins/moment',
   ],
   /*
   ** Nuxt.js modules //test
@@ -64,7 +64,8 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://3.16.136.89:2000',
+    baseURL: 'http://192.168.1.127:2000'
+    //baseURL: 'http://3.16.136.89:2000', AWS VPS EC2
   },
 
   auth: {

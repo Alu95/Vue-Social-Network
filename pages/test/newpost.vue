@@ -15,7 +15,7 @@
             </div>
             <hr />
           </md-card-header>
-          <md-card-content v-if="$auth.loggedIn">
+          <md-card-content>
             <div class="md-layout">
               <div
                 class="md-layout-item md-large-size-10 md-xlarge-size-7 md-small-size-20 md-xsmall-hide"
@@ -44,6 +44,9 @@
                 <pre class="mt-2">Character left: {{postTextFull.length}}/240</pre>
               </div>
             </div>
+          </md-card-content>
+
+          <md-card-content>
             <p>Preview:</p>
             <span class="post" v-for="(text, index) in parsedPost" :key="`text-${index}`">
               <!-- INIZIO DEL TESTO -->
@@ -56,10 +59,6 @@
               <span v-else>{{text}}</span>
             </span>
           </md-card-content>
-          <md-card-content v-else>
-            <p>Login to post something</p>
-          </md-card-content>
-            
         </md-card>
         <!-- POSTS -->
         <md-card class="mx-4 my-1" v-if="loading">
@@ -95,7 +94,6 @@ import Post from "@/components/postcom/PostV2";
 import Likes from '@/components/postcom/Like';
 
 export default {
-  auth: false,
   data() {
     return {
       editable: false,

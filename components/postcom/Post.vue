@@ -3,16 +3,17 @@
     <div class="my-2 ">
         <md-avatar class="md-avatar-icon md-primary">{{author.substring(0, 3)}}</md-avatar>
         <span class="text-left"><span class="font-weight-bold">{{author}}</span>  - {{date | moment("MMMM Do YYYY - HH:mm")}} </span>
-        <span> </span>
-
-        <md-menu md-direction="bottom-start" md-align-trigger>
+        <md-menu md-direction="bottom-start" md-align-trigger v-if="$auth.loggedIn">
         <md-button class="md-icon-button" md-menu-trigger><md-icon>keyboard_arrow_down</md-icon></md-button>
         <md-menu-content>
-            <md-menu-item>My Item 1</md-menu-item>
+            <md-menu-item @click="edit = !edit">Edit</md-menu-item>
             <md-menu-item>My Item 2</md-menu-item>
-            <md-menu-item>My Item 3</md-menu-item>
+            <md-divider></md-divider>
+            <md-menu-item>Hide {{$auth.user.name}}</md-menu-item>
         </md-menu-content>
         </md-menu>
+
+        
 
         <div class="menu1"> 
             <b-dropdown id="dropdown-1" text="" class="m-md-2" variant="light" v-if="$auth.loggedIn">

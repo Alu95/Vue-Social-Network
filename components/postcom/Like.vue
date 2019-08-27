@@ -8,7 +8,7 @@
             variant='success'
             v-if="loading"
             ></b-spinner>
-            <span v-else> {{up_votes}} </span>
+            <span v-else>{{up_votes}}</span>
             <font-awesome-icon 
             icon="arrow-up" 
             class="mx-2 text-success pointerM"
@@ -21,7 +21,7 @@
             variant="danger"
             v-if="loading"
             ></b-spinner>
-            <span v-else> {{down_votes}}</span>
+            <span v-else>{{down_votes}}</span>
             <font-awesome-icon 
             icon="arrow-down" 
             class="mx-2 text-danger pointerM"
