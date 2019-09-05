@@ -62,12 +62,12 @@
             
         </md-card>
         <!-- POSTS -->
-        <md-card class="mx-4 my-1" v-if="loading">
+        <md-card class="mx-4 my-1" v-if="loadingPosts">
           <md-card-content>
             <md-progress-bar md-mode="query"></md-progress-bar>
           </md-card-content>
         </md-card>
-        <md-card class="mx-4 my-1" v-for="item in postShow" :key="item.id">
+        <md-card class="mx-4 my-1" v-for="item in listAllPosts" :key="item.id">
           <md-card-content>
             <Post 
             :author="item.user_name" 
@@ -111,6 +111,7 @@ export default {
   },
   created() {
   this.postLists();
+  this.showPosts();
   },
   computed: {
     parsedPost() {

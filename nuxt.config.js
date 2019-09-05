@@ -41,9 +41,11 @@ export default {
   plugins: [
     './plugins/mixins/validation',
     './plugins/mixins/user_pers',
-    './plugins/axios',
+    './plugins/mixins/posts',
+    './plugins/axios', 
     './plugins/veeValidation',
     './plugins/moment',
+    
   ],
   /*
   ** Nuxt.js modules //test
@@ -93,7 +95,7 @@ export default {
       login: '/auth/login',
       logout: '/',
       callback: '/auth/login',
-      home: '/dash/'
+      home: '/'
     }
   },
 
