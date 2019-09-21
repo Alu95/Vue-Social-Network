@@ -6,24 +6,22 @@
         <p>{{numberTest}}</p>
         <button @click="addNum">Test</button>
         <button @click="showPosts">Test 2</button>
-        <md-card v-for="post in listAllPosts" :key="post.id_r">
-            <md-card-content>
-                <post 
-                :author="post.user_name" 
-                :date="post.created_at" 
-                :post_id="post.id_r" 
-                :postBody="post.message" />
-            </md-card-content>
-        </md-card>
+        <p>{{testTwt}}</p>
     </div>
 </template>
 
 <script>
-import post from '@/components/postcom/PostV2'
+import post from '@/components/postcom/PostV2';
+import twitter from 'twitter-text';
 
 export default {
     components: {
         post
+    },
+    computed: {
+        testTwt() {
+            return twitter.extractHashtags('test #lala #illa @test lala')
+        }
     },
     created() {
         this.showPosts()

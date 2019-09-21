@@ -18,7 +18,7 @@
                 <b-nav-item-dropdown right v-if="$auth.loggedIn">
                 <!-- Using 'button-content' slot -->
                 <template slot="button-content">{{$auth.user.name}}</template>
-                <b-dropdown-item to="/dash/" >Profile</b-dropdown-item>
+                <b-dropdown-item :to="'../user/'+$auth.user.name" >Profile</b-dropdown-item>
                 <b-dropdown-item href="#" @click="logOut">Sign Out</b-dropdown-item>
                 </b-nav-item-dropdown>
                 <b-navbar-nav right v-else>

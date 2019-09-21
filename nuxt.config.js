@@ -66,8 +66,8 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    //baseURL: 'http://192.168.1.127:2000'
-    baseURL: 'http://3.16.136.89:2000', //AWS VPS EC2
+    baseURL: 'http://192.168.1.127:2000'  
+    //baseURL: 'http://3.16.136.89:2000', //AWS VPS EC2
   },
 
   auth: {

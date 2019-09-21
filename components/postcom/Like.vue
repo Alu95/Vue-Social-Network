@@ -28,7 +28,6 @@
             @click="vote(post_id,0)"
             />
         </p>
-                <p></p>
     </div>
 </template>
 

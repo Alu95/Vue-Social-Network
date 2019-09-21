@@ -1,6 +1,7 @@
-# template2
+# Vue-Social-Network
 
-> Login - Signup Template
+> Basic social network built with Vue.js and Nuxt.js
+> Demo (http://18.191.169.63:3003)
 
 ## Build Setup
 

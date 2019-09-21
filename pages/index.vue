@@ -4,7 +4,7 @@
     <div class="md-layout" :class="`md-alignment-top-center`">
       <div class="md-layout-item md-size-25 md-small-hide">
         <md-card class="cardCenter mx-2 my-4 text-center">
-          <md-card-content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.</md-card-content>
+          <md-card-content> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.</md-card-content>
         </md-card>
       </div>
       <div class="md-layout-item md-large-size-50 md-small-size-100">
@@ -36,7 +36,7 @@
               <div>
                 <md-button 
                 class="md-primary mx-2 my-4" 
-                @click="publishPost"
+                @click="publishPost2"
                 :disabled="disabledBtn"
                 >
                   <span class="mx-1">Send</span><md-icon>play_arrow</md-icon>
@@ -89,7 +89,8 @@
 </template>
 
 <script>
-var twitter = require("twitter-text");
+
+import twitter from "twitter-text"
 import navBar from "@/components/Nav";
 import Post from "@/components/postcom/PostV2";
 import Likes from '@/components/postcom/Like';
@@ -186,6 +187,13 @@ export default {
         .catch(err => {
           console.error(err);
         });
+    },
+    async publishPost2() {
+      const text = {
+        post: this.postTextFull,
+        tags: twitter.extractHashtags(this.postTextFull)
+      }
+      await this.addPost(text);
     },
     writePost() {
       this.postTextStart = '';

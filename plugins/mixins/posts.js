@@ -12,12 +12,14 @@ const GetPosts = {
           listAllPosts: 'post_store/allPosts',
           numberTest: 'post_store/returnNewPosts',
           loadingPosts: 'post_store/isLoadingPost',
+          readTest1: 'post_store/getTest1',
         }),
       },
       methods: {
         ...mapActions({
           addNum: 'post_store/test',
-          showPosts: 'post_store/retrievePosts'
+          showPosts: 'post_store/retrievePosts',
+          addPost: 'post_store/addPost'
         }),
         parsePosts(text) {
           let result = [];
