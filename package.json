@@ -26,7 +26,7 @@
     "nuxt-vue-material": "^1.2.0",
     "twitter-text": "^3.0.0",
     "vee-validate": "^2.2.13",
-    "vue-moment": "^4.0.0"
+    "vue-moment": "^4.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
